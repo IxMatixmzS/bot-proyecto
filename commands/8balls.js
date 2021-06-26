@@ -11,9 +11,9 @@ execute (client, message, args){
  let respuestas = ["En mi opinion, si","Es cierto","Es decididamente si","Probablemente","Buen pronostico","Todo apunta a que si","Sin duda","Si","Si - definitivamente","Debes confiar en ello","Vaga, vuelve a intentarlo","Pregunta en otro momento","Sera mejor que no te lo diga ahora","No puedo predecirlo ahora","Concentrate y vuelve a preguntar","Puede ser","No cuentes con ello","Mi respuesta es no","Mis fuentes me dicen que no","Las perspectivas no son buenas","Muy dudoso"]//Definimos todas las respuestas con un Array.
  const ball = new Discord.MessageEmbed()//Definimos el embed.
  .setColor("RANDOM")//Le ponemos un color random.
- .setFooter("8Ball", client.user.avatarURL())//Le ponemos un Footer.
+ .setFooter("8Ball", client.user.avatarURL())//Le ponemos un Footer. (pie de página)
  .setTitle(`La pregunta \`${mensaje}\`, de \`${message.author.username}\``)//Y en el Titulo el autor y el mensaje.
- .setDescription(`Mi respuesta es: ${respuestas[( Math.floor(Math.random() * respuestas.length))]}.`)//Hacemos un maths random para que eliga aleatoriamente la respuestas que hemos definido.
+ .setDescription(`Mi respuesta es: ${respuestas[( Math.floor(Math.random() * respuestas.length))]}.`)//Hacemos un maths random para que eliga de forma aleatoria lo que pusimos en RESPUESTAS.
  message.channel.send({ embed : ball })//Se envia el embed.
 
  }
